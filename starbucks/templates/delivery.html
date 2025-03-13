@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'delivery.css' %}">
+
+    <link rel="stylesheet" href="{% static 'header.css' %}">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+
+    <title>Доставка</title>
+</head>
+<body>
+    <!-- Хедер -->
+    <header>
+        <a class="active" href="{% url 'home' %}">
+            <img src="{% static 'media/mini-logo.svg' %}" alt="logo">
+        </a>
+        <a class="" href="{% url 'menu' %}">МЕНЮ</a>
+        <a class="" href="{% url 'delivery' %}">ДОСТАВКА</a>
+        <a class="" href="{% url 'region' %}">O STARBUCKS В РЕГИОНЕ MIDDLE EAST</a>
+        <a class="" href="{% url 'statement' %}">ОФИЦИАЛЬНОЕ ЗАЯВЛЕНИЕ STARBUCKS</a>
+    </header>
+
+    <div class="main">
+        <aside>
+            <div>
+                <button>Заказать доставку</button>
+                <button>Кофейни рядом</button>
+            </div>
+        </aside>
+    
+        <main>
+            <div class="container-2">
+                
+                <div class="banner">
+                    <img src="{% static 'media/delivery-reclama.jpg' %}" alt="">
+                </div>
+                
+                <div class="wolt-ban">
+                    <h2>Starbucks® стал еще ближе</h2>
+                    <p>Заказывайте любимые кофе с доставкой домой! Узнайте, есть ли доставка рядом с вами, добавьте в заказ любимую продукцию Starbucks®, и мы доставим вам домой вместе с партнерами Wolt или ЯндексЕда.</p>
+                    <img src="{% static 'media/wolt-banner.jpg' %}" alt="">
+                </div>
+
+                <div class="favourite-drink">
+                    <h2>Выбирай свой любимый напиток</h2>
+                    <h2>Эспрессо Шейк с доставкой</h2>
+                    <p>Эспрессо Овсяный Шейк – нежное сочетание охлажденного эспрессо светлой обжарки с сиропом из тростникового сахара с овсяной основой. Бодрящий и питательный напиток!
+                        Эспрессо Шейк Пряная Ваниль – ароматный ванильный вкус с мягким эспрессо светлой обжарки на овсяной основе. Вкусный и освежающий.
+                        Эспрессо Шейк Белая Мокка – идеальное сочетание светлого эспрессо с соусом Белая Мокка и овсяной основы. Насыщенный питательный вкус!</p>
+                    <button class="green-btn"><a href="https://wolt.com/ru/kaz/almaty/restaurant/starbucks-panfilov">Хочу!</a></button>
+                    <h2>НАШИ ПАРТНЕРЫ ПО ДОСТАВКЕ</h2>
+                </div>
+                        
+                <div class="home-card">
+                    <img src="{% static 'media/wolt-fon.jpg' %}" alt="">
+                    <h2>Доставка Starbucks® с сервисом Wolt</h2>
+                    <p>Wolt доставит ваши любимые напитки и еду прямо к двери</p>
+                    <button class="green-btn"><a href="https://wolt.com/ru/kaz/almaty/restaurant/starbucks-panfilov">Заказать сейчас</a></button>
+                </div>
+        
+                <div class="home-card">
+                    <img src="{% static 'media/yandex-fon.jpg' %}" alt="">
+                    <h2>Доставка Starbucks® с сервисом ЯндексЕда</h2>
+                    <p>Удобная доставка любимых напитков от ЯндексЕда. Если вы уже рядом с кофейней, можно оформить самовывоз, и наши бариста приготовят напиток к вашему визиту.</p>
+                    <button class="green-btn"><a href="https://eda.yandex.kz/restaurant/starbucks_cbrus">Заказать сейчас</a></button>
+                </div>
+        
+                <div class="home-card">
+                    <img src="{% static 'media/samovyzov-fon.jpg' %}" alt="">
+                    <h2>Самовывоз</h2>
+                    <p>Если вы хотите забрать свой напиток по пути, просто сделайте заказ в ЯндексЕда, и мы приготовим напиток к вашему визиту.</p>
+                </div>   
+                
+            </div> 
+
+            <footer class="footer">
+                <div class="footer-section">
+                    <a href="{% url 'about' %}"><h2>О нас</h2></a>
+                    <a href="https://www.starbucks.com.kz/svyazhites-s-nami"><h2>Связаться с нами</h2></a>
+                    <a href="https://www.starbucks.com.kz/otvetstvennost"><h2>Социальная ответственность</h2></a>
+                    <a href="#"><h2>Программа лояльности Starbucks</h2></a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#"><img src="{% static 'media/Facebook.svg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'media/Instagram.svg' %}" alt="Instagram"></a>
+                </div>
+
+                <div class="footer-policies">
+                    <a href="https://www.starbucks.com.kz/polozhenie-o-konfidencialnosti">Положение о конфиденциальности</a>
+                    <a href="https://www.starbucks.com.kz/usloviya-ispolzovaniya-sayta">Условия использования сайта</a>
+                    <a href="#">Политика Starbucks в отношении файлов cookie</a>
+                    <a href="https://www.starbucks.com.kz/publichnaya-oferta">Публичная оферта</a>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+</body>
+</html>

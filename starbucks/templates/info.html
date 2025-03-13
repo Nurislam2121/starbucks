@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'info.css' %}">
+    <link rel="stylesheet" href="{% static 'header.css' %}">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+
+    <title>Info</title>
+</head>
+<body>
+    <!-- Хедер -->
+    <header>
+        <a class="active" href="{% url 'home' %}">
+            <img src="{% static 'media/mini-logo.svg' %}" alt="logo">
+        </a>
+        <a class="" href="{% url 'menu' %}">МЕНЮ</a>
+        <a class="" href="{% url 'delivery' %}">ДОСТАВКА</a>
+        <a class="" href="{% url 'region' %}">O STARBUCKS В РЕГИОНЕ MIDDLE EAST</a>
+        <a class="" href="{% url 'statement' %}">ОФИЦИАЛЬНОЕ ЗАЯВЛЕНИЕ STARBUCKS</a>
+    </header>
+
+    <div class="main">
+        <aside>
+            <div>
+                <button>Заказать доставку</button>
+                <button>Кофейни рядом</button>
+            </div>
+        </aside>
+    
+        <main>
+            <div class="container-2">
+    <div class="product-zag">
+        <h1>{{ heading }}</h1>
+        <h2>{{ subheading }}</h2>
+        <p>{{ description }}</p>
+    </div>
+    
+    <div class="product-container">
+        {% for product in products %}
+        <div class="product-card">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+            <footer class="footer">
+                <div class="footer-section">
+                    <a href="{% url 'about' %}"><h2>О нас</h2></a>
+                    <a href="https://www.starbucks.com.kz/svyazhites-s-nami"><h2>Связаться с нами</h2></a>
+                    <a href="https://www.starbucks.com.kz/otvetstvennost"><h2>Социальная ответственность</h2></a>
+                    <a href="#"><h2>Программа лояльности Starbucks</h2></a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#"><img src="{% static 'media/Facebook.svg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'media/Instagram.svg' %}" alt="Instagram"></a>
+                </div>
+
+                <div class="footer-policies">
+                    <a href="https://www.starbucks.com.kz/polozhenie-o-konfidencialnosti">Положение о конфиденциальности</a>
+                    <a href="https://www.starbucks.com.kz/usloviya-ispolzovaniya-sayta">Условия использования сайта</a>
+                    <a href="#">Политика Starbucks в отношении файлов cookie</a>
+                    <a href="https://www.starbucks.com.kz/publichnaya-oferta">Публичная оферта</a>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+</body>
+</html>

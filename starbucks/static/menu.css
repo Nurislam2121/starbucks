@@ -1,0 +1,30 @@
+aside {
+    width: 3000px;
+    background-image: url(media/menu-fon.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container-2 .menu-zagol {
+    margin-right: 70px;
+    margin-top: 30px;    
+    margin-bottom: 70px;
+}
+
+.container-2 .menu-zagol h1 {
+    font-weight: 700;
+}
+
+.container-2 .menu-zagol h1:last-child {
+    margin-top: 20px;
+}
+
+.reclama-txt {
+    margin-top: 30px;
+    margin-left: 70px;
+}
+
+.reclama-txt button {
+    margin-top: 20px;
+    margin-bottom: 70px;
+}

@@ -1,0 +1,21 @@
+.statement h2 {
+    margin-bottom: 30px;
+}
+
+.statement p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.banner {
+    margin: 0 70px 70px 0;
+}
+.banner img {
+    height: auto;
+    width: 800px;
+}
+
+
+aside {
+    width: 5700px;
+}

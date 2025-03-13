@@ -1,0 +1,53 @@
+aside {
+    width: 4500px;
+    background-image: url(media/delivery-fon.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner {
+    margin: 70px 70px 70px 0;
+}
+.banner img {
+    height: auto;
+    width: 800px;
+}
+
+.wolt-ban img{
+    height: auto;
+    width: 800px;
+}
+
+.wolt-ban h2 {
+    margin-bottom: 30px;
+}
+
+.wolt-ban p {
+    margin-bottom: 30px;
+}
+
+.favourite-drink {
+    margin-right: 70px;
+}
+
+.favourite-drink h2 {
+    margin-top: 30px;
+}
+
+.favourite-drink p {
+    margin-top: 30px;   
+}
+
+.favourite-drink button {
+    margin-top: 70px;
+    margin-bottom: 70;
+}
+
+.home-card img {
+    height: 200px;
+    margin-bottom: 16px;
+}
+
+.home-card {
+    margin-top: 30px;
+}

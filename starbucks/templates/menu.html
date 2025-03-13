@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'menu.css' %}">
+    <link rel="stylesheet" href="{% static 'header.css' %}">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+
+    <title>Menu</title>
+</head>
+<body>
+    <!-- Хедер -->
+    <header>
+        <a class="active" href="{% url 'home' %}">
+            <img src="{% static 'media/mini-logo.svg' %}" alt="logo">
+        </a>
+        <a class="" href="{% url 'menu' %}">МЕНЮ</a>
+        <a class="" href="{% url 'delivery' %}">ДОСТАВКА</a>
+        <a class="" href="{% url 'region' %}">O STARBUCKS В РЕГИОНЕ MIDDLE EAST</a>
+        <a class="" href="{% url 'statement' %}">ОФИЦИАЛЬНОЕ ЗАЯВЛЕНИЕ STARBUCKS</a>
+    </header>
+
+    <div class="main">
+        <aside>
+            <div>
+                <button>Заказать доставку</button>
+                <button>Кофейни рядом</button>
+            </div>
+        </aside>
+    
+        <main>
+            <div class="container-2">
+                <div class="menu-zagol">
+                    <h1>
+                        Восхитительные, приготовленные вручную напитки и вкусные блюда из тщательно отобранных ингредиентов высокого качества
+                    </h1>
+                    <h1>
+                        Всё, что мы делаем, мы делаем с любовью к кофе и делимся ей с вами в Starbucks, где бы вы ни находились
+                    </h1>
+                </div>
+                    
+                <div class="home-card">
+                    <img src="{% static 'media/napitki.jpg' %}" alt="">
+                    <h2>Наши напитки</h2>
+                    <p>От горячих и насыщенных до холодных и освежающих - откройте для себя мир напитков Starbucks®, пробуйте их, наслаждайтесь и пейте с удовольствием.</p>
+                    <button class="green-btn"><a href="{% url 'info' 'napitki' %}">Посмотреть все</a></button>
+                </div>
+        
+                <div class="home-card">
+                    <img src="{% static 'media/eda.jpg' %}" alt="">
+                    <h2>Наша еда</h2>
+                    <p>Выпечка и сэндвичи готовятся из высококачественных ингредиентов. Поэтому все, что вы пробуете, - настоящая и действительно вкусная еда</p>
+                    <button class="green-btn"><a href="{% url 'info' 'eda' %}">Посмотреть все</a></button>
+                </div>
+        
+                <div class="home-card">
+                    <img src="{% static 'media/stakan.jpg' %}" alt="">
+                    <h2>Стаканы и тамблеры</h2>
+                    <p>Удобные и яркие кружки, тамблеры, бутылки для воды и другие товары</p>
+                    <button class="green-btn"><a href="{% url 'info' 'stakany' %}">Посмотреть все</a></button>
+                </div>
+    
+                <div class="home-card">
+                    <img src="{% static 'media/coffee-fon.jpg' %}" alt="">
+                    <h2>Зерна кофе</h2>
+                    <p>Мы разделяем кофе на три вида обжарки, чтобы вы легко могли найти свой идеальный вкус кофе Starbucks®</p>
+                    <button class="green-btn"><a href="{% url 'info' 'zerno_kofe' %}">Посмотреть все</a></button>
+                </div>
+            </div>
+    
+            <div class="reclama">
+                <img src="{% static 'media/delivers-banner.jpg' %}" alt="">
+            </div>
+
+            <div class="reclama-txt">
+                <h2>
+                    Теперь Starbucks можно заказать у партнера ЯндексЕда
+                </h2>
+                <button class="green-btn"><a href="{% url 'delivery' %}">Заказать сейчас</a></button>
+            </div>
+
+            <div class="allergen">
+                <h2>АЛЛЕРГЕНЫ</h2>
+                <h2>Мы не можем гарантировать, что наша продукция не содержит конкретного аллергена ввиду использования общего оборудования, 
+                    посуды и открытой обработки продукции в наших кофейнях.</h2>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-section">
+                    <a href="{% url 'about' %}"><h2>О нас</h2></a>
+                    <a href="https://www.starbucks.com.kz/svyazhites-s-nami"><h2>Связаться с нами</h2></a>
+                    <a href="https://www.starbucks.com.kz/otvetstvennost"><h2>Социальная ответственность</h2></a>
+                    <a href="#"><h2>Программа лояльности Starbucks</h2></a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#"><img src="{% static 'media/Facebook.svg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'media/Instagram.svg' %}" alt="Instagram"></a>
+                </div>
+
+                <div class="footer-policies">
+                    <a href="https://www.starbucks.com.kz/polozhenie-o-konfidencialnosti">Положение о конфиденциальности</a>
+                    <a href="https://www.starbucks.com.kz/usloviya-ispolzovaniya-sayta">Условия использования сайта</a>
+                    <a href="#">Политика Starbucks в отношении файлов cookie</a>
+                    <a href="https://www.starbucks.com.kz/publichnaya-oferta">Публичная оферта</a>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+</body>
+</html>

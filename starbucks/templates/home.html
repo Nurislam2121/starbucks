@@ -1,0 +1,116 @@
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Главная страница Starbucks</title>
+
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+        <link rel="stylesheet" href="{% static 'header.css' %}">
+        <link rel="stylesheet" href="{% static 'footer.css' %}">
+    </head>
+    <body>
+        <!-- Хедер -->
+        <header>
+            <a class="active" href="{% url 'home' %}">
+                <img src="{% static 'media/mini-logo.svg' %}" alt="logo">
+            </a>
+            <a class="" href="{% url 'menu' %}">МЕНЮ</a>
+            <a class="" href="{% url 'delivery' %}">ДОСТАВКА</a>
+            <a class="" href="{% url 'region' %}">O STARBUCKS В РЕГИОНЕ MIDDLE EAST</a>
+            <a class="" href="{% url 'statement' %}">ОФИЦИАЛЬНОЕ ЗАЯВЛЕНИЕ STARBUCKS</a>
+        </header>
+
+        <div class="main">
+            <aside>
+                <img src="{% static 'media/Logo.png' %}" alt="Logo STARBUCKS">
+                <div>
+                    <button>Заказать сейчас</button>
+                    <button>Кофейни рядом</button>
+                </div>
+            </aside>    
+
+            <main>
+                <div class="container-1">
+                    <img src="{% static 'media/Logo-fon.jpg' %}" alt="Logo">
+                    <div class="content">
+                        <h2>Официальное Заявление Starbucks</h2>
+                        <p>В Starbucks правда и прозрачность процессов необходимы для выполнения нашей миссии, выполнения наших обещаний и соблюдения наших ценностей. Поэтому, когда дезинформация о нашей компании распространяется с молниеносной скоростью во все более полярном мире, мы считаем крайне важным реагировать фактами и подтверждать нашу позицию по ключевым вопросам.</p>
+                        <button class="green-btn"><a href="{% url 'statement' %}">Подробнее</a></button>
+                    </div>
+                </div>
+
+                <div class="container-1">
+                    <img src="{% static 'media/facts-fon.jpg' %}" alt="Logo">
+                    <div class="content">
+                        <h2>Факты о Starbucks в регионе Middle East</h2>
+                        <p>Starbucks представлен в регионе Middle East с 1999 года на основании лицензионного соглашения с торговым партнером и лицензиатом MH Alshaya Co., частным кувейтским семейным бизнесом.</p>
+                        <button class="green-btn"><a href="{% url 'region' %}">Подробнее</a></button>
+                    </div>
+                </div>
+
+                <div class="reclama">
+                    <img src="{% static 'media/Reclama.jpg' %}" alt="">
+                </div>
+                <button class="green-btn one-btn"><a href="{% url 'delivery' %}">Заказать сейчас</a></button>
+
+                <div class="container-2">
+                    <div class="home-card">
+                        <img src="{% static 'media/history.jpg' %}" alt="">
+                        <h2>Starbucks История</h2>
+                        <p>Starbucks Истории и новости</p>
+                        <button class="green-btn"><a href="https://stories.starbucks.com/emea/" target="_blank">Узнать больше</a></button>
+                    </div>
+
+                    <div class="home-card">
+                        <img src="{% static 'media/o-nas.png' %}" alt="">
+                        <h2>О нас</h2>
+                        <p>Узнать больше о нашей компании и наследии</p>
+                        <button class="green-btn"><a href="{% url 'about' %}">Узнать больше</a></button>
+                    </div>
+
+                    <div class="home-card">
+                        <img src="{% static 'media/dostavka.png' %}" alt="">
+                        <h2>Доставка Starbucks®</h2>
+                        <p>Доставка Starbucks®</p>
+                        <button class="green-btn"><a href="{% url 'delivery' %}">Заказать сейчас</a></button>
+                    </div>
+                </div>
+
+                <h2 class="zagolovka">Заказывайте любимые напитки и еду с доставкой прямо к двери</h2>
+                <div class="container-1">
+                    <img src="{% static 'media/dostavka-2.jpg' %}" alt="Logo">
+                    <div class="content">
+                        <h2>Доставка Starbucks®</h2>
+                        <p>Подарить себе новые впечатления от давно знакомого и любимого кофе Starbucks® проще, чем кажется. Насладитесь любимым кофе из своей любимой чашки.</p>
+                        <button class="green-btn"><a href="{% url 'delivery' %}">Заказать сейчас</a></button>
+                    </div>
+                </div>
+
+                <!-- Футер -->
+                <footer class="footer">
+                    <div class="footer-section">
+                        <a href="{% url 'about' %}"><h2>О нас</h2></a>
+                        <a href="https://www.starbucks.com.kz/svyazhites-s-nami"><h2>Связаться с нами</h2></a>
+                        <a href="https://www.starbucks.com.kz/otvetstvennost"><h2>Социальная ответственность</h2></a>
+                        <a href="#"><h2>Программа лояльности Starbucks</h2></a>
+                    </div>
+
+                    <div class="footer-social">
+                        <a href="#"><img src="{% static 'media/Facebook.svg' %}" alt="Facebook"></a>
+                        <a href="#"><img src="{% static 'media/Instagram.svg' %}" alt="Instagram"></a>
+                    </div>
+
+                    <div class="footer-policies">
+                        <a href="https://www.starbucks.com.kz/polozhenie-o-konfidencialnosti">Положение о конфиденциальности</a>
+                        <a href="https://www.starbucks.com.kz/usloviya-ispolzovaniya-sayta">Условия использования сайта</a>
+                        <a href="#">Политика Starbucks в отношении файлов cookie</a>
+                        <a href="https://www.starbucks.com.kz/publichnaya-oferta">Публичная оферта</a>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </body>
+    </html>
